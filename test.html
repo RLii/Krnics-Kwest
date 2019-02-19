@@ -1,0 +1,20 @@
+<script src="phaser.min.js"></script>
+<script src="phaser.js"></script>
+<script>
+var game = new Phaser.Game(2048, 1024, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var background;
+
+function preload() {
+	game.load.spritesheet("background","Krnic'sQuest/AlternateHome.png", 2048, 1024, 6);
+}
+function create() {
+background = game.add.sprite( 0,0, "background");
+
+	background.animations.add('play',[0,1,2,3,4,5],true);
+	background.animations.play("play",5,true);
+	
+	
+}
+function update() {
+}
+</script>
